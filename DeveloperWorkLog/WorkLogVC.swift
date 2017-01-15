@@ -2,8 +2,8 @@
 //  WorkLogVC.swift
 //  DeveloperWorkLog
 //
-//  Created by Abegael Jackson on 2017-01-13.
-//  Copyright © 2017 Abegael Jackson. All rights reserved.
+//  Created by Abbey Jackson on 2017-01-13.
+//  Copyright © 2017 Abbey Jackson. All rights reserved.
 //
 
 import Cocoa
