@@ -20,6 +20,8 @@
 		53F3F4671E2B4975000BE953 /* UpdateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4661E2B4975000BE953 /* UpdateCellView.swift */; };
 		53F3F46F1E2B5A7A000BE953 /* NSNib+dwl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */; };
 		53F3F4711E2C1E33000BE953 /* UpdateUserStoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */; };
+		53F3F4741E2C29AF000BE953 /* UpdateCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4731E2C29AF000BE953 /* UpdateCodingCellView.xib */; };
+		53F3F4761E2C2B1E000BE953 /* UpdateNonCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		53F3F4661E2B4975000BE953 /* UpdateCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCellView.swift; sourceTree = "<group>"; };
 		53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNib+dwl.swift"; sourceTree = "<group>"; };
 		53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateUserStoryCellView.xib; sourceTree = "<group>"; };
+		53F3F4731E2C29AF000BE953 /* UpdateCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateCodingCellView.xib; sourceTree = "<group>"; };
+		53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateNonCodingCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 		53F3F4721E2C2883000BE953 /* UpdateCellView */ = {
 			isa = PBXGroup;
 			children = (
+				53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */,
+				53F3F4731E2C29AF000BE953 /* UpdateCodingCellView.xib */,
 				53F3F4661E2B4975000BE953 /* UpdateCellView.swift */,
 				53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */,
 			);
@@ -192,6 +198,8 @@
 				2A4DE06A1E29D7BD00078108 /* Main.storyboard in Resources */,
 				53F3F4711E2C1E33000BE953 /* UpdateUserStoryCellView.xib in Resources */,
 				2A3C89821E2872E300FE738B /* Assets.xcassets in Resources */,
+				53F3F4741E2C29AF000BE953 /* UpdateCodingCellView.xib in Resources */,
+				53F3F4761E2C2B1E000BE953 /* UpdateNonCodingCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

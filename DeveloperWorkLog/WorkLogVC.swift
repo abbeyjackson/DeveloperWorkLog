@@ -64,9 +64,7 @@ class WorkLogVC: NSViewController {
         hideNewEntryButtons()
         newEntryDismissButton.isHidden = false
         
-        var topLevelObjects = NSArray()
-        
-        if let updateCellView = NSNib.loadNSView(for: "UpdateDefaultCellView", owner: newEntryView) as? UpdateCellView {
+        if let updateCellView = NSNib.loadNSView(for: "UpdateNonCodingCellView", owner: newEntryView) as? UpdateCellView {
             newEntryView = updateCellView
             newEntryView?.deleteButton.isHidden = true
             newEntryView?.deleteButton.isEnabled = false

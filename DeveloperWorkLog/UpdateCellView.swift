@@ -9,7 +9,7 @@
 import Cocoa
 
 enum UpdateCellStyle {
-    case `default`
+    case nonCoding
     case coding
     case userStory
 }
@@ -35,7 +35,7 @@ class UpdateCellView: NSView {
     @IBOutlet weak var saveButton: NSButton!
     @IBOutlet weak var deleteButton: NSButton!
     
-    var cellStyle: UpdateCellStyle = UpdateCellStyle.default
+    var cellStyle: UpdateCellStyle = UpdateCellStyle.nonCoding
     var delegate: UpdateCellViewProtocol?
     
     
