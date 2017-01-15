@@ -12,6 +12,7 @@
 		2A4DE0671E29D61A00078108 /* WorkLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4DE0651E29D61A00078108 /* WorkLogVC.swift */; };
 		2A4DE0681E29D61A00078108 /* WorkLogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4DE0661E29D61A00078108 /* WorkLogVC.xib */; };
 		2A4DE06A1E29D7BD00078108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4DE0691E29D7BD00078108 /* Main.storyboard */; };
+		531E1E771E2B0C5A0075B9A5 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E1E761E2B0C5A0075B9A5 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2A4DE0651E29D61A00078108 /* WorkLogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkLogVC.swift; sourceTree = "<group>"; };
 		2A4DE0661E29D61A00078108 /* WorkLogVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkLogVC.xib; sourceTree = "<group>"; };
 		2A4DE0691E29D7BD00078108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		531E1E761E2B0C5A0075B9A5 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		2A3C897C1E2872E300FE738B /* DeveloperWorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				531E1E761E2B0C5A0075B9A5 /* Images.swift */,
 				2A3C897D1E2872E300FE738B /* AppDelegate.swift */,
 				2A3C89811E2872E300FE738B /* Assets.xcassets */,
 				2A3C89861E2872E300FE738B /* Info.plist */,
@@ -74,6 +77,7 @@
 				2A3C89761E2872E300FE738B /* Sources */,
 				2A3C89771E2872E300FE738B /* Frameworks */,
 				2A3C89781E2872E300FE738B /* Resources */,
+				531E1E751E2B0B410075B9A5 /* Swiftgen */,
 			);
 			buildRules = (
 			);
@@ -132,11 +136,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		531E1E751E2B0B410075B9A5 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\nswiftgen images -t swift3 \"$PROJECT_DIR/DeveloperWorkLog/Assets.xcassets\" --output \"$PROJECT_DIR/DeveloperWorkLog/Images.swift\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A3C89761E2872E300FE738B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				531E1E771E2B0C5A0075B9A5 /* Images.swift in Sources */,
 				2A4DE0671E29D61A00078108 /* WorkLogVC.swift in Sources */,
 				2A3C897E1E2872E300FE738B /* AppDelegate.swift in Sources */,
 			);

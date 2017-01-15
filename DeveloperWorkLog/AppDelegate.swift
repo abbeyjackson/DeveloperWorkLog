@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem?.button {
             button.action = #selector(togglePopover)
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
-            button.image = NSImage(named: "book-icon")
+            button.image = Image(asset: Asset.bookIcon)
         }
         
         popover.behavior = .transient
@@ -36,9 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
     
     // MARK: Helpers
     
