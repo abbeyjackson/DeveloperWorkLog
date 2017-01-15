@@ -658,7 +658,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DeveloperWorkLog" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="22" y="-27"/>
         </scene>
         <!--Developer Work Log-->
         <scene sceneID="skb-8o-uvE">
@@ -668,13 +668,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="aGi-DV-SAe">
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="aGi-DV-SAe">
                                 <rect key="frame" x="20" y="15" width="415" height="204"/>
-                                <clipView key="contentView" ambiguous="YES" id="GM9-KU-tQ0">
+                                <clipView key="contentView" id="GM9-KU-tQ0">
                                     <rect key="frame" x="1" y="1" width="413" height="202"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" id="H75-dy-Gas">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="55" id="H75-dy-Gas">
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -707,13 +707,71 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7D-cL-yWN">
+                                <rect key="frame" x="20" y="227" width="415" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VI8-sp-FT4">
+                                        <rect key="frame" x="155" y="19" width="105" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Coding" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NWC-QF-mje">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="codingTapped:" target="hHF-yU-iVw" id="apd-M3-Plx"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsO-gS-X7y">
+                                        <rect key="frame" x="284" y="19" width="105" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Non-Coding" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e0A-tF-CkU">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="nonCodingTapped:" target="hHF-yU-iVw" id="q7G-sa-OCj"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ww8-RY-2bl">
+                                        <rect key="frame" x="388" y="45" width="33" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="x" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B3z-Zh-qoh">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="newEntryDismissButtonTapped:" target="hHF-yU-iVw" id="7gW-HO-nfk"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0O-LW-da9">
+                                        <rect key="frame" x="25" y="19" width="105" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="User Story" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fC4-qe-Phf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userStoryTapped:" target="hHF-yU-iVw" id="odx-fR-bnm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aGi-DV-SAe" secondAttribute="bottom" constant="15" id="1uy-1P-nlh"/>
+                            <constraint firstAttribute="trailing" secondItem="aGi-DV-SAe" secondAttribute="trailing" constant="15" id="Ai5-lI-zsv"/>
+                            <constraint firstItem="aGi-DV-SAe" firstAttribute="leading" secondItem="kh1-eR-d3G" secondAttribute="leading" constant="20" symbolic="YES" id="TpT-GD-fse"/>
+                            <constraint firstItem="aGi-DV-SAe" firstAttribute="top" secondItem="kh1-eR-d3G" secondAttribute="top" constant="81" id="gWK-T5-9TL"/>
                         </constraints>
                     </customView>
                     <connections>
+                        <outlet property="codingButton" destination="VI8-sp-FT4" id="ynx-Nr-eiK"/>
+                        <outlet property="headerView" destination="o7D-cL-yWN" id="mMK-ls-zva"/>
+                        <outlet property="newEntryDismissButton" destination="ww8-RY-2bl" id="Maq-UP-ne6"/>
+                        <outlet property="nonCodingButton" destination="NsO-gS-X7y" id="KdQ-sF-vhp"/>
                         <outlet property="tableView" destination="H75-dy-Gas" id="jmG-Pp-1mt"/>
+                        <outlet property="userStoryButton" destination="s0O-LW-da9" id="3vi-EI-4uY"/>
                     </connections>
                 </viewController>
                 <customObject id="oJJ-3w-wkA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

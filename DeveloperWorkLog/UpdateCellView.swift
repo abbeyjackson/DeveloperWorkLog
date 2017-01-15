@@ -20,7 +20,7 @@ protocol UpdateCellViewProtocol {
     func deleteButtonTapped()
 }
 
-class UpdateCellView: NSCell {
+class UpdateCellView: NSView {
     
     // MARK: Properties
 

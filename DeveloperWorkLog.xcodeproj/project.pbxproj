@@ -17,8 +17,9 @@
 		53F3F4581E2B1B52000BE953 /* UserStoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4571E2B1B52000BE953 /* UserStoryEntry.swift */; };
 		53F3F45A1E2B1C28000BE953 /* CodingWorkEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4591E2B1C28000BE953 /* CodingWorkEntry.swift */; };
 		53F3F45C1E2B1F82000BE953 /* NSArray+dwl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F45B1E2B1F82000BE953 /* NSArray+dwl.swift */; };
-		53F3F4651E2B457D000BE953 /* UpdateDefaultCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4641E2B457D000BE953 /* UpdateDefaultCellView.xib */; };
 		53F3F4671E2B4975000BE953 /* UpdateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4661E2B4975000BE953 /* UpdateCellView.swift */; };
+		53F3F46F1E2B5A7A000BE953 /* NSNib+dwl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */; };
+		53F3F4711E2C1E33000BE953 /* UpdateUserStoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		53F3F4571E2B1B52000BE953 /* UserStoryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoryEntry.swift; sourceTree = "<group>"; };
 		53F3F4591E2B1C28000BE953 /* CodingWorkEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingWorkEntry.swift; sourceTree = "<group>"; };
 		53F3F45B1E2B1F82000BE953 /* NSArray+dwl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+dwl.swift"; sourceTree = "<group>"; };
-		53F3F4641E2B457D000BE953 /* UpdateDefaultCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateDefaultCellView.xib; sourceTree = "<group>"; };
 		53F3F4661E2B4975000BE953 /* UpdateCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCellView.swift; sourceTree = "<group>"; };
+		53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNib+dwl.swift"; sourceTree = "<group>"; };
+		53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateUserStoryCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,7 @@
 		53F3F4521E2B11DC000BE953 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				53F3F4661E2B4975000BE953 /* UpdateCellView.swift */,
-				53F3F4641E2B457D000BE953 /* UpdateDefaultCellView.xib */,
+				53F3F4721E2C2883000BE953 /* UpdateCellView */,
 				2A4DE0691E29D7BD00078108 /* Main.storyboard */,
 				2A4DE0651E29D61A00078108 /* WorkLogVC.swift */,
 			);
@@ -113,8 +114,18 @@
 			isa = PBXGroup;
 			children = (
 				53F3F45B1E2B1F82000BE953 /* NSArray+dwl.swift */,
+				53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		53F3F4721E2C2883000BE953 /* UpdateCellView */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F4661E2B4975000BE953 /* UpdateCellView.swift */,
+				53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */,
+			);
+			name = UpdateCellView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4DE06A1E29D7BD00078108 /* Main.storyboard in Resources */,
-				53F3F4651E2B457D000BE953 /* UpdateDefaultCellView.xib in Resources */,
+				53F3F4711E2C1E33000BE953 /* UpdateUserStoryCellView.xib in Resources */,
 				2A3C89821E2872E300FE738B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F3F46F1E2B5A7A000BE953 /* NSNib+dwl.swift in Sources */,
 				53DD7B4E1E2AFFAD00809A13 /* Database.swift in Sources */,
 				53F3F45A1E2B1C28000BE953 /* CodingWorkEntry.swift in Sources */,
 				53F3F4561E2B121D000BE953 /* WorkLogEntryType.swift in Sources */,
