@@ -1,63 +1,55 @@
 //
-//  UpdateCellView.swift
+//  DisplayCellView.swift
 //  DeveloperWorkLog
 //
-//  Created by Abbey Jackson on 2017-01-14.
+//  Created by Abbey Jackson on 2017-01-15.
 //  Copyright © 2017 Abegael Jackson. All rights reserved.
 //
 
 import Cocoa
 
-enum CellStyle {
-    case nonCoding
-    case coding
-    case userStory
-}
-
-protocol UpdateCellViewProtocol {
+protocol DisplayCellViewProtocol {
     
-    func saveButtonTapped()
-    func deleteButtonTapped()
+    func editButtonTapped()
 }
 
-class UpdateCellView: NSView {
+class DisplayCellView: NSView {
     
     // MARK: Properties
-
-    @IBOutlet weak var storyNumberTextField: NSTextField!
-    @IBOutlet weak var workDescriptionTextField: NSTextField!
+    
+    @IBOutlet weak var storyNumberLabel: NSTextField!
+    @IBOutlet weak var workDescriptionLabel: NSTextField!
     @IBOutlet weak var storyPoints: NSTextField!
-    @IBOutlet weak var notesTextField: NSTextField!
+    @IBOutlet weak var notesLabel: NSTextField!
     @IBOutlet weak var refactoringCheckBox: NSButton!
     @IBOutlet weak var majorBugCheckBox: NSButton!
     @IBOutlet weak var addedValueCheckBox: NSButton!
     
-    @IBOutlet weak var saveButton: NSButton!
-    @IBOutlet weak var deleteButton: NSButton!
+    @IBOutlet weak var editButton: NSButton!
     
     var cellStyle: CellStyle = CellStyle.nonCoding
-    var delegate: UpdateCellViewProtocol?
+    var delegate: DisplayCellViewProtocol?
     
     
     // MARK: -Set Up
     
-    func setUpDefaultCell(with entry: WorkLogEntryType, delegate: UpdateCellViewProtocol) {
+    func setUpDefaultCell(with entry: WorkLogEntryType, delegate: DisplayCellViewProtocol) {
         
         self.delegate = delegate
         
         setUpWorkLogEntryFields(entry)
     }
     
-    func setUpCodingCell(with entry: CodingWorkEntry, delegate: UpdateCellViewProtocol) {
+    func setUpCodingCell(with entry: CodingWorkEntry, delegate: DisplayCellViewProtocol) {
         
         self.delegate = delegate
-
+        
         cellStyle = CellStyle.coding
         setUpCodingEntryFields(entry)
         setUpWorkLogEntryFields(entry)
     }
     
-    func setUpUserStoryCell(with entry: UserStoryEntry, delegate: UpdateCellViewProtocol) {
+    func setUpUserStoryCell(with entry: UserStoryEntry, delegate: DisplayCellViewProtocol) {
         
         self.delegate = delegate
         
@@ -72,8 +64,8 @@ class UpdateCellView: NSView {
     
     private func setUpWorkLogEntryFields(_ entry: WorkLogEntryType) {
         
-        workDescriptionTextField.stringValue = entry.workDescription
-        notesTextField.stringValue = entry.notes ?? ""
+        workDescriptionLabel.stringValue = entry.workDescription
+        notesLabel.stringValue = entry.notes ?? ""
         addedValueCheckBox.isEnabled = entry.addedValue ?? false
     }
     
@@ -85,19 +77,14 @@ class UpdateCellView: NSView {
     
     private func setUpUserStoryEntryFields(_ entry: UserStoryEntry) {
         
-        storyNumberTextField.intValue = Int32(entry.storyNumber)
+        storyNumberLabel.intValue = Int32(entry.storyNumber)
     }
     
     
     // MARK: Actions
     
-    @IBAction func saveButtonTapped(_ sender: NSButton) {
+    @IBAction func editButtonTapped(_ sender: NSButton) {
         
-        delegate?.saveButtonTapped()
-    }
-    
-    @IBAction func deleteButtonTapped(_ sender: NSButton) {
-        
-        delegate?.deleteButtonTapped()
+        delegate?.editButtonTapped()
     }
 }
