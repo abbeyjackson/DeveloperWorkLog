@@ -1,5 +1,5 @@
 //
-//  DisplayCellView.swift
+//  DisplayCell.swift
 //  DeveloperWorkLog
 //
 //  Created by Abbey Jackson on 2017-01-15.
@@ -8,12 +8,7 @@
 
 import Cocoa
 
-protocol DisplayCellViewProtocol {
-    
-    func editButtonTapped()
-}
-
-class DisplayCellView: NSView {
+class DisplayCell: NSTableCellView {
     
     // MARK: Properties
     
@@ -28,30 +23,30 @@ class DisplayCellView: NSView {
     @IBOutlet weak var editButton: NSButton!
     
     var cellStyle: CellStyle = CellStyle.nonCoding
-    var delegate: DisplayCellViewProtocol?
+    var editAction: CellActionType = CellActionType.none
     
     
     // MARK: -Set Up
     
-    func setUpDefaultCell(with entry: WorkLogEntryType, delegate: DisplayCellViewProtocol) {
+    func setUpDefaultCell(with entry: WorkLogEntryType, editAction: CellActionType) {
         
-        self.delegate = delegate
+        self.editAction = editAction
         
         setUpWorkLogEntryFields(entry)
     }
     
-    func setUpCodingCell(with entry: CodingWorkEntry, delegate: DisplayCellViewProtocol) {
+    func setUpCodingCell(with entry: CodingWorkEntry, editAction: CellActionType) {
         
-        self.delegate = delegate
+        self.editAction = editAction
         
         cellStyle = CellStyle.coding
         setUpCodingEntryFields(entry)
         setUpWorkLogEntryFields(entry)
     }
     
-    func setUpUserStoryCell(with entry: UserStoryEntry, delegate: DisplayCellViewProtocol) {
+    func setUpUserStoryCell(with entry: UserStoryEntry, editAction: CellActionType) {
         
-        self.delegate = delegate
+        self.editAction = editAction
         
         cellStyle = CellStyle.userStory
         setUpUserStoryEntryFields(entry)
@@ -85,6 +80,6 @@ class DisplayCellView: NSView {
     
     @IBAction func editButtonTapped(_ sender: NSButton) {
         
-        delegate?.editButtonTapped()
+        editAction?(self)
     }
 }

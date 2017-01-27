@@ -1,5 +1,5 @@
 //
-//  UpdateCellView.swift
+//  UpdateCell.swift
 //  DeveloperWorkLog
 //
 //  Created by Abbey Jackson on 2017-01-14.
@@ -14,13 +14,7 @@ enum CellStyle {
     case userStory
 }
 
-protocol UpdateCellViewProtocol {
-    
-    func saveButtonTapped()
-    func deleteButtonTapped()
-}
-
-class UpdateCellView: NSView {
+class UpdateCell: NSTableCellView {
     
     // MARK: Properties
 
@@ -36,30 +30,33 @@ class UpdateCellView: NSView {
     @IBOutlet weak var deleteButton: NSButton!
     
     var cellStyle: CellStyle = CellStyle.nonCoding
-    var delegate: UpdateCellViewProtocol?
-    
+    var saveAction: CellActionType = CellActionType.none
+    var deleteAction: CellActionType = CellActionType.none
     
     // MARK: -Set Up
     
-    func setUpDefaultCell(with entry: WorkLogEntryType, delegate: UpdateCellViewProtocol) {
+    func setUpDefaultCell(with entry: WorkLogEntryType, saveAction: CellActionType, deleteAction: CellActionType) {
         
-        self.delegate = delegate
+        self.saveAction = saveAction
+        self.deleteAction = deleteAction
         
         setUpWorkLogEntryFields(entry)
     }
     
-    func setUpCodingCell(with entry: CodingWorkEntry, delegate: UpdateCellViewProtocol) {
+    func setUpCodingCell(with entry: CodingWorkEntry, saveAction: CellActionType, deleteAction: CellActionType) {
         
-        self.delegate = delegate
+        self.saveAction = saveAction
+        self.deleteAction = deleteAction
 
         cellStyle = CellStyle.coding
         setUpCodingEntryFields(entry)
         setUpWorkLogEntryFields(entry)
     }
     
-    func setUpUserStoryCell(with entry: UserStoryEntry, delegate: UpdateCellViewProtocol) {
+    func setUpUserStoryCell(with entry: UserStoryEntry, saveAction: CellActionType, deleteAction: CellActionType) {
         
-        self.delegate = delegate
+        self.saveAction = saveAction
+        self.deleteAction = deleteAction
         
         cellStyle = CellStyle.userStory
         setUpUserStoryEntryFields(entry)
@@ -93,11 +90,11 @@ class UpdateCellView: NSView {
     
     @IBAction func saveButtonTapped(_ sender: NSButton) {
         
-        delegate?.saveButtonTapped()
+        saveAction?(self)
     }
     
     @IBAction func deleteButtonTapped(_ sender: NSButton) {
         
-        delegate?.deleteButtonTapped()
+        deleteAction?(self)
     }
 }

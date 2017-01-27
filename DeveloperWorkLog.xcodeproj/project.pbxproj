@@ -17,13 +17,13 @@
 		53F3F4581E2B1B52000BE953 /* UserStoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4571E2B1B52000BE953 /* UserStoryEntry.swift */; };
 		53F3F45A1E2B1C28000BE953 /* CodingWorkEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4591E2B1C28000BE953 /* CodingWorkEntry.swift */; };
 		53F3F45C1E2B1F82000BE953 /* NSArray+dwl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F45B1E2B1F82000BE953 /* NSArray+dwl.swift */; };
-		53F3F4671E2B4975000BE953 /* UpdateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4661E2B4975000BE953 /* UpdateCellView.swift */; };
+		53F3F4671E2B4975000BE953 /* UpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F4661E2B4975000BE953 /* UpdateCell.swift */; };
 		53F3F46F1E2B5A7A000BE953 /* NSNib+dwl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */; };
 		53F3F4711E2C1E33000BE953 /* UpdateUserStoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */; };
 		53F3F4741E2C29AF000BE953 /* UpdateCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4731E2C29AF000BE953 /* UpdateCodingCellView.xib */; };
 		53F3F4761E2C2B1E000BE953 /* UpdateNonCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */; };
 		53F3F4791E2C2F7C000BE953 /* DisplayUserStoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4781E2C2F7C000BE953 /* DisplayUserStoryCellView.xib */; };
-		53F3F47B1E2C2FD7000BE953 /* DisplayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F47A1E2C2FD7000BE953 /* DisplayCellView.swift */; };
+		53F3F47B1E2C2FD7000BE953 /* DisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F47A1E2C2FD7000BE953 /* DisplayCell.swift */; };
 		53F3F47D1E31B6EE000BE953 /* DisplayCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F47C1E31B6EE000BE953 /* DisplayCodingCellView.xib */; };
 		53F3F47F1E31B900000BE953 /* DisplayNonCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F47E1E31B900000BE953 /* DisplayNonCodingCellView.xib */; };
 /* End PBXBuildFile section */
@@ -41,13 +41,13 @@
 		53F3F4571E2B1B52000BE953 /* UserStoryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoryEntry.swift; sourceTree = "<group>"; };
 		53F3F4591E2B1C28000BE953 /* CodingWorkEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingWorkEntry.swift; sourceTree = "<group>"; };
 		53F3F45B1E2B1F82000BE953 /* NSArray+dwl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+dwl.swift"; sourceTree = "<group>"; };
-		53F3F4661E2B4975000BE953 /* UpdateCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCellView.swift; sourceTree = "<group>"; };
+		53F3F4661E2B4975000BE953 /* UpdateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCell.swift; sourceTree = "<group>"; };
 		53F3F46E1E2B5A7A000BE953 /* NSNib+dwl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNib+dwl.swift"; sourceTree = "<group>"; };
 		53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateUserStoryCellView.xib; sourceTree = "<group>"; };
 		53F3F4731E2C29AF000BE953 /* UpdateCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateCodingCellView.xib; sourceTree = "<group>"; };
 		53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateNonCodingCellView.xib; sourceTree = "<group>"; };
 		53F3F4781E2C2F7C000BE953 /* DisplayUserStoryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayUserStoryCellView.xib; sourceTree = "<group>"; };
-		53F3F47A1E2C2FD7000BE953 /* DisplayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCellView.swift; sourceTree = "<group>"; };
+		53F3F47A1E2C2FD7000BE953 /* DisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCell.swift; sourceTree = "<group>"; };
 		53F3F47C1E31B6EE000BE953 /* DisplayCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayCodingCellView.xib; sourceTree = "<group>"; };
 		53F3F47E1E31B900000BE953 /* DisplayNonCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayNonCodingCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +137,7 @@
 			children = (
 				53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */,
 				53F3F4731E2C29AF000BE953 /* UpdateCodingCellView.xib */,
-				53F3F4661E2B4975000BE953 /* UpdateCellView.swift */,
+				53F3F4661E2B4975000BE953 /* UpdateCell.swift */,
 				53F3F4701E2C1E33000BE953 /* UpdateUserStoryCellView.xib */,
 			);
 			name = UpdateCellView;
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				53F3F4781E2C2F7C000BE953 /* DisplayUserStoryCellView.xib */,
-				53F3F47A1E2C2FD7000BE953 /* DisplayCellView.swift */,
+				53F3F47A1E2C2FD7000BE953 /* DisplayCell.swift */,
 				53F3F47C1E31B6EE000BE953 /* DisplayCodingCellView.xib */,
 				53F3F47E1E31B900000BE953 /* DisplayNonCodingCellView.xib */,
 			);
@@ -250,12 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53F3F47B1E2C2FD7000BE953 /* DisplayCellView.swift in Sources */,
+				53F3F47B1E2C2FD7000BE953 /* DisplayCell.swift in Sources */,
 				53F3F46F1E2B5A7A000BE953 /* NSNib+dwl.swift in Sources */,
 				53DD7B4E1E2AFFAD00809A13 /* Database.swift in Sources */,
 				53F3F45A1E2B1C28000BE953 /* CodingWorkEntry.swift in Sources */,
 				53F3F4561E2B121D000BE953 /* WorkLogEntryType.swift in Sources */,
-				53F3F4671E2B4975000BE953 /* UpdateCellView.swift in Sources */,
+				53F3F4671E2B4975000BE953 /* UpdateCell.swift in Sources */,
 				531E1E771E2B0C5A0075B9A5 /* Images.swift in Sources */,
 				2A4DE0671E29D61A00078108 /* WorkLogVC.swift in Sources */,
 				2A3C897E1E2872E300FE738B /* AppDelegate.swift in Sources */,

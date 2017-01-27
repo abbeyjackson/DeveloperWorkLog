@@ -8,6 +8,8 @@
 
 import Cocoa
 
+typealias CellActionType = ((NSTableCellView) -> Void)?
+
 class WorkLogVC: NSViewController {
     
     // MARK: Properties
@@ -19,7 +21,7 @@ class WorkLogVC: NSViewController {
     @IBOutlet weak var nonCodingButton: NSButton!
     @IBOutlet weak var newEntryDismissButton: NSButton!
     
-    var newEntryView: UpdateCellView?
+    var newEntryView = UpdateCell()
     
 
     // MARK: Lifecycle
@@ -38,10 +40,10 @@ class WorkLogVC: NSViewController {
         hideNewEntryButtons()
         newEntryDismissButton.isHidden = false
         
-        if let updateCellView = NSNib.loadNSView(for: "UpdateUserStoryCellView", owner: newEntryView) as? UpdateCellView {
+        if let updateCellView = NSNib.loadNSView(for: "UpdateUserStoryCellView", owner: newEntryView) as? UpdateCell {
             newEntryView = updateCellView
-            newEntryView?.deleteButton.isHidden = true
-            newEntryView?.deleteButton.isEnabled = false
+            newEntryView.deleteButton.isHidden = true
+            newEntryView.deleteButton.isEnabled = false
             showNewEntryView()
         }
     }
@@ -51,10 +53,10 @@ class WorkLogVC: NSViewController {
         hideNewEntryButtons()
         newEntryDismissButton.isHidden = false
         
-        if let updateCellView = NSNib.loadNSView(for: "UpdateCodingCellView", owner: newEntryView) as? UpdateCellView {
+        if let updateCellView = NSNib.loadNSView(for: "UpdateCodingCellView", owner: newEntryView) as? UpdateCell {
             newEntryView = updateCellView
-            newEntryView?.deleteButton.isHidden = true
-            newEntryView?.deleteButton.isEnabled = false
+            newEntryView.deleteButton.isHidden = true
+            newEntryView.deleteButton.isEnabled = false
             showNewEntryView()
         }
     }
@@ -64,17 +66,17 @@ class WorkLogVC: NSViewController {
         hideNewEntryButtons()
         newEntryDismissButton.isHidden = false
         
-        if let updateCellView = NSNib.loadNSView(for: "UpdateNonCodingCellView", owner: newEntryView) as? UpdateCellView {
+        if let updateCellView = NSNib.loadNSView(for: "UpdateNonCodingCellView", owner: newEntryView) as? UpdateCell {
             newEntryView = updateCellView
-            newEntryView?.deleteButton.isHidden = true
-            newEntryView?.deleteButton.isEnabled = false
+            newEntryView.deleteButton.isHidden = true
+            newEntryView.deleteButton.isEnabled = false
             showNewEntryView()
         }
     }
     
     @IBAction func newEntryDismissButtonTapped(_ sender: NSButton) {
         
-        newEntryView?.removeFromSuperview()
+        newEntryView.removeFromSuperview()
         hideNewEntryButtons(false)
     }
     
@@ -84,14 +86,11 @@ class WorkLogVC: NSViewController {
     
     func showNewEntryView() {
         
-        if let newEntryView = newEntryView {
-            
-            headerView.addSubview(newEntryView)
-            newEntryView.topAnchor.constraint(equalTo: headerView.topAnchor)
-            newEntryView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor)
-            newEntryView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor)
-            newEntryView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor)
-        }
+        headerView.addSubview(newEntryView)
+        newEntryView.topAnchor.constraint(equalTo: headerView.topAnchor)
+        newEntryView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor)
+        newEntryView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor)
+        newEntryView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor)
     }
     
     func hideNewEntryButtons(_ isHidden: Bool = true) {
@@ -125,19 +124,5 @@ extension WorkLogVC: NSTableViewDelegate {
             return cell
         }
         else { return nil }
-    }
-}
-
-
-extension WorkLogVC: UpdateCellViewProtocol {
-    
-    func saveButtonTapped() {
-        
-        
-    }
-    
-    func deleteButtonTapped() {
-        
-        
     }
 }

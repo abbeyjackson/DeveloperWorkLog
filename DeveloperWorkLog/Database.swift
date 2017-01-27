@@ -28,7 +28,7 @@ class Database {
             }
         }
         set {
-            store.setValue(entries, forKey: key)
+            store.setValue(newValue, forKey: key)
         }
     }
     
@@ -54,7 +54,6 @@ class Database {
 
         entries.append(entry)
         
-        // TODO: see if this is needed (because of set{})
         store.set(entries, forKey: key)
     }
     
