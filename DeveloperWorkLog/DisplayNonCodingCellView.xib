@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="i1d-h8-43u" customClass="DisplayCellView" customModule="DeveloperWorkLog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zK-Jm-XFz">
+                    <rect key="frame" x="250" y="33" width="73" height="18"/>
+                    <buttonCell key="cell" type="check" title="Refactoring" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4gh-FO-gVp">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DLb-dd-JlR">
+                    <rect key="frame" x="347" y="20" width="64" height="32"/>
+                    <buttonCell key="cell" type="push" title="Edit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jMx-Ux-xCB">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="editButtonTapped:" target="i1d-h8-43u" id="Bdv-t5-zyL"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlD-7x-cOk">
+                    <rect key="frame" x="11" y="29" width="231" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="bDX-T5-M4B">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-Jg-IwM">
+                    <rect key="frame" x="11" y="6" width="231" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="CYx-Zn-k4D">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="r0Q-Jg-IwM" firstAttribute="top" secondItem="LlD-7x-cOk" secondAttribute="bottom" constant="6" id="2Dc-lr-EaO"/>
+                <constraint firstItem="DLb-dd-JlR" firstAttribute="leading" secondItem="7zK-Jm-XFz" secondAttribute="trailing" constant="32" id="3JO-IQ-7tZ"/>
+                <constraint firstItem="LlD-7x-cOk" firstAttribute="leading" secondItem="r0Q-Jg-IwM" secondAttribute="leading" id="62I-gr-5dy"/>
+                <constraint firstItem="r0Q-Jg-IwM" firstAttribute="trailing" secondItem="LlD-7x-cOk" secondAttribute="trailing" id="GLA-g3-KxD"/>
+                <constraint firstItem="7zK-Jm-XFz" firstAttribute="leading" secondItem="LlD-7x-cOk" secondAttribute="trailing" constant="12" id="GRv-1e-2Pk"/>
+                <constraint firstItem="7zK-Jm-XFz" firstAttribute="top" secondItem="i1d-h8-43u" secondAttribute="top" constant="5" id="M2V-pB-eeR"/>
+                <constraint firstItem="LlD-7x-cOk" firstAttribute="leading" secondItem="i1d-h8-43u" secondAttribute="leading" constant="13" id="NL3-O9-xsM"/>
+                <constraint firstAttribute="trailing" secondItem="DLb-dd-JlR" secondAttribute="trailing" constant="10" id="Qf8-0n-e2Y"/>
+                <constraint firstItem="DLb-dd-JlR" firstAttribute="top" secondItem="i1d-h8-43u" secondAttribute="top" constant="6" id="b9U-53-71K"/>
+                <constraint firstItem="LlD-7x-cOk" firstAttribute="centerY" secondItem="DLb-dd-JlR" secondAttribute="centerY" id="uzC-Db-YhW"/>
+            </constraints>
+            <connections>
+                <outlet property="editButton" destination="DLb-dd-JlR" id="bah-VP-ywy"/>
+                <outlet property="notesLabel" destination="r0Q-Jg-IwM" id="wc4-Wv-xti"/>
+                <outlet property="refactoringCheckBox" destination="7zK-Jm-XFz" id="wb2-U3-wiC"/>
+                <outlet property="saveButton" destination="DLb-dd-JlR" id="xBh-Kd-B19"/>
+                <outlet property="workDescriptionLabel" destination="LlD-7x-cOk" id="4hU-uC-ds0"/>
+            </connections>
+            <point key="canvasLocation" x="2083.5" y="22"/>
+        </customView>
+    </objects>
+</document>

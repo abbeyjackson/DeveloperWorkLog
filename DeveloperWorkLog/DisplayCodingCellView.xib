@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="FGn-Pp-NDM" customClass="DisplayCellView" customModule="DeveloperWorkLog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Tc-HJ-C98">
+                    <rect key="frame" x="250" y="33" width="73" height="18"/>
+                    <buttonCell key="cell" type="check" title="Refactoring" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LSd-AW-OUp">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7qm-AC-LaS">
+                    <rect key="frame" x="250" y="18" width="84" height="18"/>
+                    <buttonCell key="cell" type="check" title="Major Bug" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vGF-MW-aRo">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B9P-hn-ODn">
+                    <rect key="frame" x="250" y="3" width="84" height="18"/>
+                    <buttonCell key="cell" type="check" title="Added Value" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Ak0-9v-TyA">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I1w-Yg-aVp">
+                    <rect key="frame" x="347" y="20" width="64" height="32"/>
+                    <buttonCell key="cell" type="push" title="Edit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f9k-hF-BAC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="editButtonTapped:" target="FGn-Pp-NDM" id="gs7-UQ-sDm"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfS-19-5cq">
+                    <rect key="frame" x="11" y="29" width="231" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="c6Q-qA-Gwd">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCt-m8-zgD">
+                    <rect key="frame" x="11" y="6" width="231" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="f9n-F3-Pqj">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="I1w-Yg-aVp" secondAttribute="trailing" constant="10" id="0Rs-n4-OFz"/>
+                <constraint firstItem="gfS-19-5cq" firstAttribute="leading" secondItem="FGn-Pp-NDM" secondAttribute="leading" constant="13" id="0ko-Mj-AaH"/>
+                <constraint firstItem="7qm-AC-LaS" firstAttribute="top" secondItem="FGn-Pp-NDM" secondAttribute="top" constant="20" symbolic="YES" id="0wL-R4-1iv"/>
+                <constraint firstItem="I1w-Yg-aVp" firstAttribute="leading" secondItem="3Tc-HJ-C98" secondAttribute="trailing" constant="32" id="C8Q-nJ-1OC"/>
+                <constraint firstItem="gfS-19-5cq" firstAttribute="centerY" secondItem="I1w-Yg-aVp" secondAttribute="centerY" id="F0J-2F-UYx"/>
+                <constraint firstItem="UCt-m8-zgD" firstAttribute="top" secondItem="gfS-19-5cq" secondAttribute="bottom" constant="6" id="GWA-Fr-LzZ"/>
+                <constraint firstItem="7qm-AC-LaS" firstAttribute="top" secondItem="3Tc-HJ-C98" secondAttribute="bottom" constant="1" id="IG0-Qh-kPo"/>
+                <constraint firstItem="B9P-hn-ODn" firstAttribute="top" secondItem="7qm-AC-LaS" secondAttribute="bottom" constant="1" id="Ntm-Zx-gKO"/>
+                <constraint firstItem="3Tc-HJ-C98" firstAttribute="leading" secondItem="gfS-19-5cq" secondAttribute="trailing" constant="12" id="ON3-Tf-kMy"/>
+                <constraint firstItem="7qm-AC-LaS" firstAttribute="trailing" secondItem="B9P-hn-ODn" secondAttribute="trailing" id="Pli-Z7-LOK"/>
+                <constraint firstItem="7qm-AC-LaS" firstAttribute="leading" secondItem="B9P-hn-ODn" secondAttribute="leading" id="U4i-6R-MAg"/>
+                <constraint firstItem="gfS-19-5cq" firstAttribute="leading" secondItem="UCt-m8-zgD" secondAttribute="leading" id="XNw-qJ-iR7"/>
+                <constraint firstItem="I1w-Yg-aVp" firstAttribute="leading" secondItem="7qm-AC-LaS" secondAttribute="trailing" constant="21" id="cut-6S-8pA"/>
+                <constraint firstItem="UCt-m8-zgD" firstAttribute="trailing" secondItem="gfS-19-5cq" secondAttribute="trailing" id="nQr-o7-hUa"/>
+                <constraint firstItem="UCt-m8-zgD" firstAttribute="baseline" secondItem="B9P-hn-ODn" secondAttribute="baseline" id="oHF-dJ-tlZ"/>
+                <constraint firstItem="3Tc-HJ-C98" firstAttribute="leading" secondItem="7qm-AC-LaS" secondAttribute="leading" id="qBU-E9-xbr"/>
+            </constraints>
+            <connections>
+                <outlet property="addedValueCheckBox" destination="B9P-hn-ODn" id="h4F-rl-z8m"/>
+                <outlet property="editButton" destination="I1w-Yg-aVp" id="CgL-um-yQl"/>
+                <outlet property="majorBugCheckBox" destination="7qm-AC-LaS" id="9gU-58-0Qe"/>
+                <outlet property="notesLabel" destination="UCt-m8-zgD" id="74Y-IE-p0G"/>
+                <outlet property="refactoringCheckBox" destination="3Tc-HJ-C98" id="ReU-2g-5pe"/>
+                <outlet property="saveButton" destination="I1w-Yg-aVp" id="PVq-VT-9bS"/>
+                <outlet property="workDescriptionLabel" destination="gfS-19-5cq" id="wpV-Uu-lft"/>
+            </connections>
+            <point key="canvasLocation" x="2083.5" y="22"/>
+        </customView>
+    </objects>
+</document>

@@ -24,6 +24,8 @@
 		53F3F4761E2C2B1E000BE953 /* UpdateNonCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */; };
 		53F3F4791E2C2F7C000BE953 /* DisplayUserStoryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F4781E2C2F7C000BE953 /* DisplayUserStoryCellView.xib */; };
 		53F3F47B1E2C2FD7000BE953 /* DisplayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F47A1E2C2FD7000BE953 /* DisplayCellView.swift */; };
+		53F3F47D1E31B6EE000BE953 /* DisplayCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F47C1E31B6EE000BE953 /* DisplayCodingCellView.xib */; };
+		53F3F47F1E31B900000BE953 /* DisplayNonCodingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F47E1E31B900000BE953 /* DisplayNonCodingCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		53F3F4751E2C2B1E000BE953 /* UpdateNonCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateNonCodingCellView.xib; sourceTree = "<group>"; };
 		53F3F4781E2C2F7C000BE953 /* DisplayUserStoryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayUserStoryCellView.xib; sourceTree = "<group>"; };
 		53F3F47A1E2C2FD7000BE953 /* DisplayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCellView.swift; sourceTree = "<group>"; };
+		53F3F47C1E31B6EE000BE953 /* DisplayCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayCodingCellView.xib; sourceTree = "<group>"; };
+		53F3F47E1E31B900000BE953 /* DisplayNonCodingCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayNonCodingCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			children = (
 				53F3F4781E2C2F7C000BE953 /* DisplayUserStoryCellView.xib */,
 				53F3F47A1E2C2FD7000BE953 /* DisplayCellView.swift */,
+				53F3F47C1E31B6EE000BE953 /* DisplayCodingCellView.xib */,
+				53F3F47E1E31B900000BE953 /* DisplayNonCodingCellView.xib */,
 			);
 			name = DisplayCellView;
 			sourceTree = "<group>";
@@ -210,9 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4DE06A1E29D7BD00078108 /* Main.storyboard in Resources */,
+				53F3F47D1E31B6EE000BE953 /* DisplayCodingCellView.xib in Resources */,
 				53F3F4711E2C1E33000BE953 /* UpdateUserStoryCellView.xib in Resources */,
 				53F3F4791E2C2F7C000BE953 /* DisplayUserStoryCellView.xib in Resources */,
 				2A3C89821E2872E300FE738B /* Assets.xcassets in Resources */,
+				53F3F47F1E31B900000BE953 /* DisplayNonCodingCellView.xib in Resources */,
 				53F3F4741E2C29AF000BE953 /* UpdateCodingCellView.xib in Resources */,
 				53F3F4761E2C2B1E000BE953 /* UpdateNonCodingCellView.xib in Resources */,
 			);
