@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CodingWorkEntry: WorkLogEntryType {
+class CodingWorkEntry: WorkLogEntry {
     
     var requiredRefactoring: Bool?
     var hadMajorBug: Bool?
@@ -24,5 +24,6 @@ class CodingWorkEntry: WorkLogEntryType {
         self.workDescription = workDescription
         self.notes = notes
         self.addedValue = addedValue
+        self.type = .coding
     }
 }

@@ -18,13 +18,13 @@ class Database {
     // MARK: Properties
     
     private let store = UserDefaults.standard
-    private var entries: [WorkLogEntryType] {
+    private var entries: [WorkLogEntry] {
         get {
-            if let entries = store.object(forKey: self.key) as? [WorkLogEntryType] {
+            if let entries = store.object(forKey: self.key) as? [WorkLogEntry] {
                 return entries
             }
             else {
-                return [WorkLogEntryType]()
+                return [WorkLogEntry]()
             }
         }
         set {
@@ -34,7 +34,7 @@ class Database {
     
     private let key = "DeveloperWorkLog"
     
-    var currentEntry: WorkLogEntryType?
+    var currentEntry: WorkLogEntry?
     var currentIndex: Int?
     var newIndex: Int?
     
@@ -50,14 +50,14 @@ class Database {
     
     // MARK: Functionality
     
-    func add(_ entry: WorkLogEntryType) {
+    func add(_ entry: WorkLogEntry) {
 
         entries.append(entry)
         
         store.set(entries, forKey: key)
     }
     
-    func retrieveEntry(at index: Int) -> WorkLogEntryType? {
+    func retrieveEntry(at index: Int) -> WorkLogEntry? {
         
         if let entry = entries[safe: index] {
             currentIndex = index
@@ -67,12 +67,12 @@ class Database {
         return nil
     }
     
-    func retrieveAllEntries() -> [WorkLogEntryType] {
+    func retrieveAllEntries() -> [WorkLogEntry] {
         
         return entries
     }
     
-    func update(_ entry: WorkLogEntryType) throws {
+    func update(_ entry: WorkLogEntry) throws {
         
         if let index = currentIndex {
             entries[index] = entry

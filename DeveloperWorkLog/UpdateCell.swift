@@ -35,7 +35,7 @@ class UpdateCell: NSTableCellView {
     
     // MARK: -Set Up
     
-    func setUpDefaultCell(with entry: WorkLogEntryType, saveAction: CellActionType, deleteAction: CellActionType) {
+    func setUpDefaultCell(with entry: WorkLogEntry, saveAction: CellActionType, deleteAction: CellActionType) {
         
         self.saveAction = saveAction
         self.deleteAction = deleteAction
@@ -67,7 +67,7 @@ class UpdateCell: NSTableCellView {
     
     // MARK: Helpers
     
-    private func setUpWorkLogEntryFields(_ entry: WorkLogEntryType) {
+    private func setUpWorkLogEntryFields(_ entry: WorkLogEntry) {
         
         workDescriptionTextField.stringValue = entry.workDescription
         notesTextField.stringValue = entry.notes ?? ""

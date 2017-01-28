@@ -26,5 +26,6 @@ class UserStoryEntry: CodingWorkEntry {
         self.requiredRefactoring = requiredRefactoring
         self.hadMajorBug = hadMajorBug
         self.addedValue = addedValue
+        self.type = .userStory
     }
 }

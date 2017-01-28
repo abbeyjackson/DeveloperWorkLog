@@ -21,6 +21,7 @@ class WorkLogVC: NSViewController {
     @IBOutlet weak var nonCodingButton: NSButton!
     @IBOutlet weak var newEntryDismissButton: NSButton!
     
+    var allEntries = [WorkLogEntry]()
     var newEntryView = UpdateCell()
     
 
@@ -30,6 +31,7 @@ class WorkLogVC: NSViewController {
         super.viewDidLoad()
         
         hideNewEntryButtons(false)
+        allEntries = Database.shared.retrieveAllEntries()
     }
     
 
@@ -104,25 +106,52 @@ class WorkLogVC: NSViewController {
 }
 
 
-extension WorkLogVC: NSTableViewDataSource {
+extension WorkLogVC: NSTableViewDataSource, NSTableViewDelegate {
+    
+    enum CellIdentifiers: Int {
+        
+        case descriptionCell
+        case refactorCell
+        case bugCell
+        case valueCell
+        
+        var stringValue: String {
+            switch self {
+            case .descriptionCell: return "DescriptionCell"
+            case .refactorCell: return "RefactorCell"
+            case .bugCell: return "BugCell"
+            case .valueCell: return "ValueCell"
+            }
+        }
+        
+        static let updateCell = "UpdateCell"
+        static let displayCell = "DisplayCell"
+    }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 10
+        return 5
     }
-    
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return "This is cell #\(row)"
-    }
-}
-
-
-extension WorkLogVC: NSTableViewDelegate {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        if let cell = tableView.make(withIdentifier: "workLogCell", owner: nil) as? NSTableCellView {
+        
+        if let cell = tableView.make(withIdentifier: "DescriptionCell", owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = "This is cell #\(row)"
             return cell
         }
-        else { return nil }
+        
+        if let tableColumn = tableColumn, tableColumn == tableView.tableColumns[0] {
+            
+        }
+       
+        return nil
     }
 }
+
+
+
+
+
+
+
+
+

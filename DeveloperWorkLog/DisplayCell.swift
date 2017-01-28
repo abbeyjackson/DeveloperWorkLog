@@ -28,7 +28,7 @@ class DisplayCell: NSTableCellView {
     
     // MARK: -Set Up
     
-    func setUpDefaultCell(with entry: WorkLogEntryType, editAction: CellActionType) {
+    func setUpDefaultCell(with entry: WorkLogEntry, editAction: CellActionType) {
         
         self.editAction = editAction
         
@@ -57,7 +57,7 @@ class DisplayCell: NSTableCellView {
     
     // MARK: Helpers
     
-    private func setUpWorkLogEntryFields(_ entry: WorkLogEntryType) {
+    private func setUpWorkLogEntryFields(_ entry: WorkLogEntry) {
         
         workDescriptionLabel.stringValue = entry.workDescription
         notesLabel.stringValue = entry.notes ?? ""
